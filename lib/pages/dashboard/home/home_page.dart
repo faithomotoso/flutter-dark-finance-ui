@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
               Text("Money received",
                   style: TextStyle(color: Colors.white.withOpacity(0.7))),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               Text(
                 homePageController.moneyReceived,

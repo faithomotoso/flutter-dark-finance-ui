@@ -1,4 +1,5 @@
 import 'package:finance_dark_ui_challenge/controller/home_page_controller.dart';
+import 'package:finance_dark_ui_challenge/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class MoneyFlowWidget extends StatefulWidget {
@@ -33,7 +34,10 @@ class _MoneyFlowWidgetState extends State<MoneyFlowWidget> {
                                 : 0),
                         child: ChoiceChip(
                           label: Text(
-                              homePageController.moneyFlows.elementAt(i).time),
+                            homePageController.moneyFlows.elementAt(i).time,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
                           selected: index == i,
                           onSelected: (b) {
                             homePageController.setMoneyFlowIndex(i);
@@ -46,36 +50,44 @@ class _MoneyFlowWidgetState extends State<MoneyFlowWidget> {
               const SizedBox(
                 height: 30,
               ),
-              Row(
-                children: [
-                  Expanded(
-                      child: Text(
-                    "Income",
-                    style: TextStyle(
-                      color: Colors.white.withOpacity(0.6),
+              Padding(
+                padding: appPadding,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Text(
+                          "Income",
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.6),
+                          ),
+                        )),
+                        Text(
+                            "${homePageController.moneyFlows.elementAt(index).incomePercentage}%"),
+                        Icon(Icons.arrow_downward_outlined)
+                      ],
                     ),
-                  )),
-                  Text(
-                      "${homePageController.moneyFlows.elementAt(index).incomePercentage}%"),
-                  Icon(Icons.arrow_downward_outlined)
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                      child: Text(
-                    "Outcome",
-                    style: TextStyle(
-                      color: Colors.white.withOpacity(0.6),
+                    const SizedBox(
+                      height: 20,
                     ),
-                  )),
-                  Text(
-                      "${homePageController.moneyFlows.elementAt(index).outcomePercentage}%"),
-                  Icon(Icons.arrow_upward_outlined)
-                ],
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Text(
+                          "Outcome",
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.6),
+                          ),
+                        )),
+                        Text(
+                            "${homePageController.moneyFlows.elementAt(index).outcomePercentage}%"),
+                        Icon(Icons.arrow_upward_outlined)
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           );
