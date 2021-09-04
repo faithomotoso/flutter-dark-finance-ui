@@ -1,5 +1,6 @@
 import 'package:finance_dark_ui_challenge/models/card.dart';
 import 'package:finance_dark_ui_challenge/models/flow.dart';
+import 'package:finance_dark_ui_challenge/models/money_chart_data.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomePageController {
@@ -14,6 +15,16 @@ class HomePageController {
   int get numberOfCards => cards.length;
 
   String moneyReceived = "\$40,000.91";
+
+  List<MoneyChartData> moneyChartData = [
+    MoneyChartData(amount: 50.0, date: "11 Apr"),
+    MoneyChartData(amount: 623.9, date: "29 Apr"),
+    MoneyChartData(amount: 4100, date: "5 June"),
+    MoneyChartData(amount: 2342.8, date: "30 June"),
+    MoneyChartData(amount: 6238.3, date: "3 July"),
+    MoneyChartData(amount: 3759, date: "11 Sept"),
+    MoneyChartData(amount: 3100, date: "20 Sept"),
+  ];
 
   int percentageIncrease = 15;
 

@@ -1,4 +1,5 @@
 import 'package:finance_dark_ui_challenge/controller/home_page_controller.dart';
+import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_chart.dart';
 import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_flow_widget.dart';
 import 'package:finance_dark_ui_challenge/utils/text_style.dart';
 import 'package:finance_dark_ui_challenge/utils/utils.dart';
@@ -46,7 +47,6 @@ class _HomePageState extends State<HomePage> {
                 "Your Balance",
                 style: AppTextStyle.header2Style,
               ),
-
               const SizedBox(
                 height: 30,
               ),
@@ -54,6 +54,11 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+        AspectRatio(
+          aspectRatio: 16 / 9,
+          child: MoneyChartWidget(),
+        ),
+        const SizedBox(height: 30,),
         MoneyFlowWidget()
       ],
     );
@@ -81,11 +86,11 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         Align(
-          alignment: Alignment.center,
+            alignment: Alignment.center,
             child: Text(
-          "${homePageController.percentageIncrease}%",
-          style: TextStyle(fontSize: 18),
-        )),
+              "${homePageController.percentageIncrease}%",
+              style: TextStyle(fontSize: 18),
+            )),
         const SizedBox(
           width: 10,
         ),
