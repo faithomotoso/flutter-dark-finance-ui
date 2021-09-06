@@ -1,6 +1,7 @@
 import 'package:finance_dark_ui_challenge/controller/home_page_controller.dart';
 import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_chart.dart';
 import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_flow_widget.dart';
+import 'package:finance_dark_ui_challenge/ui/components/translucent_container.dart';
 import 'package:finance_dark_ui_challenge/utils/text_style.dart';
 import 'package:finance_dark_ui_challenge/utils/utils.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,9 @@ class _HomePageState extends State<HomePage> {
                         Icons.menu,
                       )),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _showDialog();
+                      },
                       icon: Icon(
                         Icons.more_vert,
                       ))
@@ -58,7 +61,9 @@ class _HomePageState extends State<HomePage> {
           aspectRatio: 16 / 9,
           child: MoneyChartWidget(),
         ),
-        const SizedBox(height: 30,),
+        const SizedBox(
+          height: 30,
+        ),
         MoneyFlowWidget()
       ],
     );
@@ -97,5 +102,31 @@ class _HomePageState extends State<HomePage> {
         Center(child: Icon(Icons.arrow_upward_outlined))
       ],
     );
+  }
+
+  void _showDialog() {
+    showTranslucentDialog(context: context, child: Material(
+      color: Colors.transparent,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ListTile(
+            title: Text("Cards",),
+            onTap: (){
+              Navigator.pop(context);
+              // Navigate to cards page
+            },
+          ),
+          ListTile(
+            title: Text("Upcoming",),
+            onTap: (){},
+          ),
+          ListTile(
+            title: Text("Statistics",),
+            onTap: (){},
+          ),
+        ],
+      ),
+    ));
   }
 }

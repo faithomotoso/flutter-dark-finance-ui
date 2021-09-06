@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             bodyText1: TextStyle(color: Colors.white),
             bodyText2: TextStyle(color: Colors.white),
+            headline6: TextStyle(color: Colors.white),
+            subtitle1: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
           ),
           fontFamily: "Poppins",
           chipTheme: ChipThemeData(
