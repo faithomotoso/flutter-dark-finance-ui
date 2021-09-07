@@ -1,6 +1,7 @@
 import 'package:finance_dark_ui_challenge/controller/home_page_controller.dart';
 import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_chart.dart';
 import 'package:finance_dark_ui_challenge/pages/dashboard/home/money_flow_widget.dart';
+import 'package:finance_dark_ui_challenge/pages/dashboard/home/upcoming.dart';
 import 'package:finance_dark_ui_challenge/ui/components/translucent_container.dart';
 import 'package:finance_dark_ui_challenge/utils/text_style.dart';
 import 'package:finance_dark_ui_challenge/utils/utils.dart';
@@ -120,7 +121,10 @@ class _HomePageState extends State<HomePage> {
           ),
           ListTile(
             title: Text("Upcoming",),
-            onTap: (){},
+            onTap: (){
+              Navigator.pop(context);
+              showNormalDialog(context: context, child: UpcomingWidget());
+            },
           ),
           ListTile(
             title: Text("Statistics",),

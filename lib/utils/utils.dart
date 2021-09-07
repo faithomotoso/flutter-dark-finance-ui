@@ -7,6 +7,15 @@ void showTranslucentDialog(
     {required BuildContext context, required Widget child}) {
   showDialog(
       context: context,
-      builder: (ctx) => TranslucentContainer(child: child),
+      builder: (ctx) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: TranslucentContainer(child: child)),
+      barrierColor: Colors.transparent);
+}
+
+void showNormalDialog({required BuildContext context, required Widget child}) {
+  showDialog(
+      context: context,
+      builder: (ctx) => child,
       barrierColor: Colors.transparent);
 }
