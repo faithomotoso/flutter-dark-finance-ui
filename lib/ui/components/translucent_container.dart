@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 
 class TranslucentContainer extends StatelessWidget {
   final Widget child;
+  Color? color;
 
-  TranslucentContainer({required this.child});
+  TranslucentContainer({required this.child, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,10 @@ class TranslucentContainer extends StatelessWidget {
       child: ClipRRect(
           borderRadius: BorderRadius.circular(26),
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaY: 4, sigmaX: 4, tileMode: TileMode.mirror),
+            filter: ImageFilter.blur(sigmaY: 4, sigmaX: 10,),
             child: Container(
               decoration: BoxDecoration(
-                // color: AppColors.grey.withOpacity(0.8),
-                color: Colors.white.withOpacity(0.1),
+                color: color ?? AppColors.grey.withOpacity(0.8),
               ),
               padding: const EdgeInsets.all(20),
               child: child,

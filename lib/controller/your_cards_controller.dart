@@ -15,16 +15,16 @@ class YourCardsController {
   List<DebitCard> cards = [
     DebitCard(
         cardNumber: "4717 4719 4091 1366",
-        cardHolder: "Kari Jobe",
-        expiryDate: "09/23"),
+        cardHolder: "Rich Kidz",
+        expiryDate: "03/23"),
     DebitCard(
         cardNumber: "5892 9402 8547 2784",
-        cardHolder: "Kari Jobe",
-        expiryDate: "09/23"),
+        cardHolder: "Raymond Reddington1",
+        expiryDate: "12/22"),
     DebitCard(
         cardNumber: "8563 9532 5478 0213",
-        cardHolder: "Kari Jobe",
-        expiryDate: "09/23"),
+        cardHolder: "Abdul Kazakhan",
+        expiryDate: "11/24"),
   ];
 
   List<Transaction> transactions = [

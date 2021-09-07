@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   fl_chart: ^0.40.0
   flutter_svg: ^0.22.0
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:

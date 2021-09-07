@@ -1,4 +1,5 @@
 import 'package:finance_dark_ui_challenge/models/transaction.dart';
+import 'package:finance_dark_ui_challenge/ui/components/svg_icon_bg.dart';
 import 'package:finance_dark_ui_challenge/utils/colors.dart';
 import 'package:finance_dark_ui_challenge/utils/text_style.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +19,21 @@ class TransactionTile extends StatelessWidget {
       child: Row(
         children: [
           _transactionIcon(),
-          const SizedBox(width: 20,),
-          Expanded(child: Column(
+          const SizedBox(
+            width: 20,
+          ),
+          Expanded(
+              child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(transaction.name, style: AppTextStyle.header2Style.copyWith(fontSize: 18),),
-              Text(transaction.description, ),
+              Text(
+                transaction.name,
+                style: AppTextStyle.header2Style.copyWith(fontSize: 18),
+              ),
+              Text(
+                transaction.description,
+              ),
             ],
           )),
           Text(transaction.amount)
@@ -34,16 +43,8 @@ class TransactionTile extends StatelessWidget {
   }
 
   Widget _transactionIcon() {
-    return Container(
-      decoration: BoxDecoration(
-          color: AppColors.orange, borderRadius: BorderRadius.circular(20)),
-      padding: const EdgeInsets.all(20),
-      child: SvgPicture.asset(
-        "assets/icons/${transaction.svgIconName}",
-        height: 20,
-        width: 20,
-        color: Colors.white,
-      ),
+    return SvgIconBg(
+      svgIconPath: "assets/icons/${transaction.svgIconName}",
     );
   }
 }
