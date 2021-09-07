@@ -1,8 +1,10 @@
 import 'package:finance_dark_ui_challenge/utils/colors.dart';
 import 'package:finance_dark_ui_challenge/utils/navi/app_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(MyApp());
 }
 

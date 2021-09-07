@@ -1,10 +1,12 @@
 import 'package:finance_dark_ui_challenge/pages/dashboard/dashboard.dart';
+import 'package:finance_dark_ui_challenge/pages/dashboard/home/your_cards/your_cards.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppRoute {
   static Route _navigate(Widget page, String pageName) {
-    return MaterialPageRoute(builder: (_) => page,
-    settings: RouteSettings(name: pageName));
+    return CupertinoPageRoute(
+        builder: (_) => page, settings: RouteSettings(name: pageName));
   }
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -13,6 +15,10 @@ class AppRoute {
     switch (settings.name) {
       case "/dashboard":
         page = Dashboard();
+        break;
+
+      case "/your_cards":
+        page = YourCardsPage();
         break;
 
       default:

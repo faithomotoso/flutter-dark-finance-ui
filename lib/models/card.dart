@@ -1,9 +1,9 @@
-class Card {
+class DebitCard {
   String cardNumber;
   String cardHolder;
   String expiryDate;
 
-  Card(
+  DebitCard(
       {required this.cardNumber,
       required this.cardHolder,
       required this.expiryDate});

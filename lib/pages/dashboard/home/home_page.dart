@@ -115,6 +115,7 @@ class _HomePageState extends State<HomePage> {
             onTap: (){
               Navigator.pop(context);
               // Navigate to cards page
+              Navigator.pushNamed(context, "/your_cards");
             },
           ),
           ListTile(
