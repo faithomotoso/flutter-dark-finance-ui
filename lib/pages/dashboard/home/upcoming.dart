@@ -4,7 +4,6 @@ import 'package:finance_dark_ui_challenge/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class UpcomingWidget extends StatelessWidget {
-  const UpcomingWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class UpcomingWidget extends StatelessWidget {
                   children: [
                     Text(
                       "Upcoming",
-                      style: AppTextStyle.header2Style.copyWith(fontSize: 20),
+                      style: AppTextStyle.header2Style.copyWith(fontSize: 26),
                     ),
                     const SizedBox(
                       height: 10,

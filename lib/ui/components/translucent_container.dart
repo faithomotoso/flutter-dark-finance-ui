@@ -12,18 +12,21 @@ class TranslucentContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      child: ClipRRect(
-          borderRadius: BorderRadius.circular(26),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaY: 4, sigmaX: 10,),
-            child: Container(
-              decoration: BoxDecoration(
-                color: color ?? AppColors.grey.withOpacity(0.8),
+      child: Material(
+        color: Colors.transparent,
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(26),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaY: 4, sigmaX: 10,),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: color ?? AppColors.grey.withOpacity(0.8),
+                ),
+                padding: const EdgeInsets.all(20),
+                child: child,
               ),
-              padding: const EdgeInsets.all(20),
-              child: child,
-            ),
-          )),
+            )),
+      ),
     );
   }
 }

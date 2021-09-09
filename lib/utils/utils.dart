@@ -17,5 +17,6 @@ void showNormalDialog({required BuildContext context, required Widget child}) {
   showDialog(
       context: context,
       builder: (ctx) => child,
+      barrierDismissible: true,
       barrierColor: Colors.transparent);
 }
