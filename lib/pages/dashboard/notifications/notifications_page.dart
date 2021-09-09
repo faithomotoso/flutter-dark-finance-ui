@@ -10,6 +10,8 @@ class NotificationsPage extends StatefulWidget {
 class _NotificationsPageState extends State<NotificationsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.orange,);
+    return Center(child: Text(
+      "Notifications"
+    ),);
   }
 }

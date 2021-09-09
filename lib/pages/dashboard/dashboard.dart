@@ -24,7 +24,7 @@ class _DashboardState extends State<Dashboard> {
           valueListenable: NavigationBarController.currentPage,
           builder: (context, page, child) {
             return AnimatedSwitcher(
-              duration: const Duration(milliseconds: 450),
+              duration: const Duration(milliseconds: 400),
               child: NavigationBarController.currentWidget,
             );
           },
