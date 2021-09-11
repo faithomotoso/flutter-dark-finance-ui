@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Dashboard extends StatefulWidget {
-  static const String pageName = "/dashboard";
+  static const String pageName = "/";
 
   @override
   _DashboardState createState() => _DashboardState();

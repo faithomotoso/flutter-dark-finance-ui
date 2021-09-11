@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           ),
           canvasColor: AppColors.grey),
       onGenerateRoute: AppRoute.onGenerateRoute,
-      initialRoute: "/dashboard",
+      initialRoute: "/",
     );
   }
 }

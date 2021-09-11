@@ -13,7 +13,7 @@ class AppRoute {
     Widget page;
 
     switch (settings.name) {
-      case "/dashboard":
+      case "/":
         page = Dashboard();
         break;
 
